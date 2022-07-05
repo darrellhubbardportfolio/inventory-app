@@ -1,0 +1,62 @@
+<head>
+	<link href="/public/css/forms/shipments-form.css" rel="stylesheet" />
+</head>
+<!-- extends the index.html page -->
+
+<form action="/shipments/create-new-shipment" method="POST" name="Shipments">
+	
+	<span style="font-size: 12px; text-align: center; width: 100%;"> Create A New Shipment Order </span>
+	
+	<div class="shipment-form-data container d-flex flex-column align-items-center justify-content-center">
+		<label for="title"> title </label>
+		<input type="text" name="title" />
+	</div>
+
+	<div class="shipment-form-data container d-flex flex-column align-items-center justify-content-center">
+		<label for="shipping_date"> shipping date </label>
+		<input type="date" name="shipping_date" />
+	</div>
+
+	<div class="shipment-form-data container d-flex flex-column align-items-center justify-content-center">
+		<label for="shipping_costs"> shipping costs </label>
+		<input type="number" name="shipping_costs" min=0 />
+	</div>
+
+	<div class="shipment-form-data container d-flex flex-column align-items-center justify-content-center">
+		<label for="shipping_origin"> where is it coming from? </label>
+		<input list="shipment-origins" name="shipping_origin" id="shipping_origin" />
+		<datalist id="shipment-origins">
+
+		</datalist>
+	</div>
+
+	<div class="shipment-form-data container d-flex flex-column align-items-center justify-content-center">
+		<label for="shipping_destination"> where is it going to? </label>
+		<input list="shipment-destinations" name="shipping_destination" id="shipping_destination" />
+		<datalist id="shipment-destinations">
+
+		</datalist>
+	</div>
+
+	<div class="shipment-form-data container d-flex flex-column align-items-center justify-content-center">
+		<label for="shipping_sender"> who is sending the shipment? </label>
+		<input list="shipment-senders" name="shipping_sender" id="shipping_sender" />
+		<datalist id="shipment-senders">
+
+		</datalist>
+	</div>
+
+	<div class="shipment-form-data container d-flex flex-column align-items-center justify-content-center">
+		<label for="shipping_receiver"> where is it supposed to handle it? </label>
+		<input list="shipment-receivers" name="shipping_receiver" id="shipping_receiver" />
+		<datalist id="shipment-receivers">
+
+		</datalist>
+	</div>
+
+	<button type="submit" onsubmit=""> submit </button>
+	
+	<a href="/shipments"> cancel </a>
+	
+</form>
+
